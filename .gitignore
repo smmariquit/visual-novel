@@ -1,0 +1,13 @@
+# Ren'Py build artifacts
+game/saves/
+game/cache/
+*.rpyc
+*.rpymc
+*.rpa
+log.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
