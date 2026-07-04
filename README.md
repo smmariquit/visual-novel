@@ -1,50 +1,59 @@
-# visual-novel
+# Elbi Dating Sim
 
-Ren'Py 8 visual novel scaffold (1280×720).
+A short Ren'Py dating sim set at **UP Los Baños** (Elbi). Romance four fictional classmates over Welcome Week, pick afternoon hangouts, build affection, get an ending on Palma Bridge.
+
+**Art policy:** campus backgrounds only, sourced from [Wikimedia Commons](game/images/ATTRIBUTION.md). No AI-generated images. No character sprites, story is told with dialogue over real campus photos.
 
 ## Prerequisites
 
-Install [Ren'Py 8.3+](https://www.renpy.org/latest.html) or point the launcher at this folder.
+Install [Ren'Py 8.3+](https://www.renpy.org/latest.html).
+
+## Run locally
+
+### Ren'Py Launcher
+
+1. Clone or download this repo anywhere on your machine.
+2. Open the Ren'Py launcher.
+3. Set **Projects Directory** to the parent folder that contains this project.
+4. Select **visual-novel** (folder name) or **Elbi Dating Sim** (display name) → **Launch Project**.
+
+### Command line
+
+**Linux / macOS:**
+
+```sh
+cd /path/to/renpy-sdk
+./renpy.sh /path/to/visual-novel run
+```
+
+**Windows:**
+
+```bat
+cd C:\path\to\renpy-sdk
+renpy.exe C:\path\to\visual-novel run
+```
 
 ## Project layout
 
 ```
-visual-novel/
-├── game/
-│   ├── script.rpy          # start label → jumps into story
-│   ├── characters.rpy      # Character() definitions
-│   ├── chapters/           # Story scripts (one file per chapter/act)
-│   ├── images/             # Backgrounds, sprites (bg room.png, eileen happy.png, …)
-│   ├── audio/              # Music and sound effects
-│   ├── gui/                # Generated UI assets (from template)
-│   ├── gui.rpy
-│   ├── screens.rpy
-│   └── options.rpy
-└── README.md
+game/
+├── script.rpy # Title + name entry
+├── characters.rpy # Rafa, Jules, Sam, Thea
+├── systems.rpy # Affection / day counter
+├── chapters/
+│ ├── prologue.rpy # Arrival + meet cast
+│ ├── week_one.rpy # 3-day hangout loop
+│ └── endings.rpy # Route endings
+├── images/bg/ # UPLB photos (Wikimedia)
+└── images/ATTRIBUTION.md # Licenses + credits
 ```
 
-Ren'Py compiles every `.rpy` file under `game/` (including subfolders), so you can split routes and chapters freely.
+## Gameplay
 
-## Run locally
+1. Choose your major flavor in the prologue (flavor text only).
+2. Spend **three afternoons** at campus locations, each visit bumps affection.
+3. On **day 3**, Palma Bridge confession scene routes to the character with highest affection (need 5+ points).
 
-**Launcher:** Add `/home/stimmie/dev/personal` as the projects directory, open **visual-novel**, click **Launch Project**.
+## Credits
 
-**CLI** (with SDK on your PATH or adjust the path):
-
-```sh
-cd /path/to/renpy-sdk
-./renpy.sh /home/stimmie/dev/personal/visual-novel run
-```
-
-**Lint:**
-
-```sh
-./renpy.sh /home/stimmie/dev/personal/visual-novel lint
-```
-
-## Next steps
-
-1. Replace placeholder dialogue in `game/chapters/prologue.rpy`.
-2. Add art to `game/images/` (see [Displaying Images](https://www.renpy.org/doc/html/displaying_images.html)).
-3. Tune `game/options.rpy` (title, version, `build.name`).
-4. Add routes as new files under `game/chapters/` or `game/routes/`.
+Background photos: Wikimedia Commons contributors, see [ATTRIBUTION.md](game/images/ATTRIBUTION.md).
