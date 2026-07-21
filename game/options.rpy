@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("visual-novel")
+define config.name = _("Elbi Dating Sim")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,9 +30,10 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-A Ren'Py visual novel scaffold.
+Elbi Dating Sim, a short Ren'Py romance set at UPLB.
 
-Edit game/chapters/ for story content and game/characters.rpy for the cast.
+Campus backgrounds are real photos from Wikimedia Commons (see game/images/ATTRIBUTION.md).
+Character art is dialogue-only; no AI-generated images.
 """)
 
 
@@ -40,7 +41,7 @@ Edit game/chapters/ for story content and game/characters.rpy for the cast.
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "visual-novel"
+define build.name = "elbi-dating-sim"
 
 
 ## Sounds and music ############################################################

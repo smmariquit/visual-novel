@@ -86,9 +86,9 @@ define gui.title_text_size = 50
 
 ## Main and Game Menus #########################################################
 
-## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+## Dimmed campus photos for menus are set in elbi_gui.rpy (readability).
+define gui.main_menu_background = "bg freedom_park"
+define gui.game_menu_background = "bg student_union"
 
 
 ## Dialogue ####################################################################

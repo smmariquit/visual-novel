@@ -1,0 +1,51 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+Exception: DynamicImage ['gui/button/navigation_[prefix_]background.png', 'gui/button/[prefix_]background.png']: could not find image. ('gui/button/navigation_insensitive_background.png', 'gui/button/navigation_background.png', and 4 more.)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/home/stimmie/renpy/current/renpy/ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/stimmie/renpy/current/renpy/python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "/home/stimmie/renpy/current/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/stimmie/renpy/current/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/home/stimmie/renpy/current/renpy/display/core.py", line 2748, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/stimmie/renpy/current/renpy/display/screen.py", line 485, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "/home/stimmie/renpy/current/renpy/display/displayable.py", line 424, in visit_all
+    for d in self.visit():
+  File "/home/stimmie/renpy/current/renpy/display/image.py", line 785, in visit
+    self.find_target()
+  File "/home/stimmie/renpy/current/renpy/display/image.py", line 683, in find_target
+    raise Exception(error)
+Exception: DynamicImage ['gui/button/navigation_[prefix_]background.png', 'gui/button/[prefix_]background.png']: could not find image. ('gui/button/navigation_insensitive_background.png', 'gui/button/navigation_background.png', and 4 more.)
+
+Linux-7.0.12-101.fc43.x86_64-x86_64-with-glibc2.42 x86_64
+Ren'Py 8.3.7.25031702
+Elbi Dating Sim 1.0
+Fri Jul  3 16:45:28 2026
